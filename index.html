@@ -20,40 +20,82 @@
     <header>
       <nav>
         <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><img src="assets/img/logo-almundo.svg" alt="almundo.com"></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#">Ingresar</a></li>
-          <li><a href="#">Clubalmundo</a></li>
-          <li><a href="#">Sucursales</a></li>
-          <li><a href="#">Llamanos</a></li>
-          <li><a href="#">Ayuda</a></li>
-        </ul>
+          <a href="#" class="brand-logo"><img src="assets/img/logo-almundo.svg" alt="almundo.com"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#"><i class="material-icons left">person</i>Ingresar</a></li>
+            <li><a href="#"><img src="assets/img/clubtext.png" alt="clubalmundo"></a></li>
+            <li><a href="#">Sucursales</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Llamanos<i class="material-icons right">keyboard_arrow_down</i></a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
         </div>
         <div class="nav-content">
           <div class="container">
-            <ul class="tabs tabs-transparent">
-              <li class="tab"><a href="#">Hoteles</a></li>
-              <li class="tab"><a href="#">Vuelo</a></li>
-              <li class="tab"><a href="#">Vuelo + Hotel</a></li>
-              <li class="tab"><a href="#">Paquetes</a></li>
-              <li class="tab"><a href="#">Disney</a></li>
-              <li class="tab"><a href="#">Escapadas</a></li>
-              <li class="tab"><a href="#">Seguros</a></li>
-              <li class="tab"><a href="#">Autos</a></li>
-              <li class="tab"><a href="#">Cruceros</a></li>
-              <li class="tab"><a href="#">OFERTAS</a></li>
-              <li class="tab"><a href="#">Más</a></li>
+            <ul class="hide-on-med-and-down">
+              <li><a href="#">Hoteles</a></li>
+              <li><a href="#">Vuelo</a></li>
+              <li><a href="#">Vuelo + Hotel</a></li>
+              <li><a href="#">Paquetes</a></li>
+              <li><a href="#">Disney</a></li>
+              <li><a href="#">Escapadas</a></li>
+              <li><a href="#">Seguros</a></li>
+              <li><a href="#">Autos</a></li>
+              <li><a href="#">Cruceros</a></li>
+              <li><a href="#">OFERTAS</a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Más<i class="material-icons right">keyboard_arrow_down</i></a></li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">Ventas y atención al cliente 018000943040 (+57) 1 5082969</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">Lunes a viernes 7 a 21 hs Sábados 8 a 16 hs Domingos y festivos 10 a 16 hs</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+      <li class="divider"></li>
+      <li><a href="#!">opción 1</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">opción 2</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">opción 3</a></li>
+    </ul>
+    <main ng-model="">
       <div class="row">
         <ng-view  onload=""  $autoscroll=""></ng-view>
       </div>
     </main>
-    <footer></footer>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Prueba técnica</h5>
+            <p class="grey-text text-lighten-4">Desarrollo frontend para Almundo.com</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.gmail.com">gmail: alejo.tanatos@gmail.com</a></li>
+              <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/a-serna">github: a-serna</a></li>
+              <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.linkedin.com/in/alejobrumker/">Linkedin: Luis Alejandro Serna Velásquez</a></li>
+              <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.behance.net/AlejoSe">Behance: AlejoSe</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Luis Alejandro Serna Velásquez | Diseñador visual
+        <a class="grey-text text-lighten-4 right" href="#!">alejo.tanatos@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      $(document).ready(function(){
+      $(".dropdown-button").dropdown();
+    });
+    </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   </body>
