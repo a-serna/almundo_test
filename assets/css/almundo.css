@@ -1,0 +1,31 @@
+/*css file*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+body{
+  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+nav{
+  background-color: #12407f;
+}
+.nav-content{
+  background: #013870;
+  background: -moz-linear-gradient(left, #013870 0%, #31608e 33%, #466994 49%, #466994 49%, #31608e 64%, #013870 100%);
+  background: -webkit-linear-gradient(left, #013870 0%,#31608e 33%,#466994 49%,#466994 49%,#31608e 64%,#013870 100%);
+  background: linear-gradient(to right, #013870 0%,#31608e 33%,#466994 49%,#466994 49%,#31608e 64%,#013870 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013870', endColorstr='#013870',GradientType=1 );
+  border-top: 3px solid #5980a4;
+  border-bottom: 3px solid #5980a4;
+  height: 40px;
+}
+.tabs{height: 30px;}
+.tabs .tab{
+  height: 30px;
+  line-height: 30px;
+  text-transform: none;
+}
+.tabs .tab a{
+  padding: 0 15px;
+  overflow: auto;
+}
