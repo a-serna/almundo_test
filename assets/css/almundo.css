@@ -20,6 +20,7 @@ body{
 }
 main {
   flex: 1 0 auto;
+  padding: 40px 5%;
 }
 nav{
   background-color: #12407f;
@@ -48,10 +49,69 @@ nav .nav-content i.material-icons{
   height: 40px;
   line-height: 30px;
 }
+#dropdown4{
+  width: 200px !important;
+}
 footer.page-footer{
   background-color: #12407f;
 }
+.mapa{
+  width: 241px;
+  height: 110px;
+  background-color: white;
+  text-align: center;
+}
 
+.filtrado{
+  width: 241px;
+  background-color: white;
+}
+.filtrado .row{
+  margin-bottom: 5px;
+}
+
+.details{
+  border: 1px solid black;
+  padding: 10px 10px;
+}
+
+.collapsible{
+  box-shadow: none;
+  border: none;
+  margin: 0px 0px;
+}
+
+.collapsible-header{
+  padding: 0 0;
+  border-bottom: none;
+}
+
+.collapsible-header.small{
+  background-color: transparent;
+  border-bottom: 2px solid #6e6e6e;
+}
+
+input{
+  color: black;
+}
+
+.input-field{
+  margin: 15px;
+}
+
+.collapsible-body p{
+  padding: 1rem;
+}
+
+.hotelList{
+  float: none;
+  margin-left: 25%;
+  margin-top: 0px;
+}
+
+.info-box{
+  display: flex;
+}
 /*responsive*/
 @media only screen and (max-width: 1280px) {
   .nav-content ul li a{
