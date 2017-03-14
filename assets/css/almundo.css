@@ -104,14 +104,45 @@ input{
 }
 
 .hotelList{
-  float: none;
   margin-left: 25%;
   margin-top: 0px;
+  height: auto;
+}
+
+.hotelList img{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.hotelList li{
+  background-color: white;
+  padding: 10px 10px;
+  height: 200px;
+  margin-bottom: 20px;
 }
 
 .info-box{
-  display: flex;
+  float: left;
 }
+
+h6{
+  font-weight: bold;
+}
+
+h4{
+  font-weight: bold;
+  margin: 0px;
+}
+
+.precio{
+  border-left: 1px dashed #656565;
+}
+
+.precio p{
+  line-height: normal;
+  margin: 5px;
+}
+
 /*responsive*/
 @media only screen and (max-width: 1280px) {
   .nav-content ul li a{

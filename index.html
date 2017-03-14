@@ -15,8 +15,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
     <link href="assets/css/nouislider.min.css" rel="stylesheet">
     <script src="assets/js/almundo.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-resource.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script> -->
     <!-- <script src="app.js" charset="utf-8"></script> -->
     <!-- <script src="components/hoteles.js" charset="utf-8"></script> -->
     <title>Al mundo | Alejandro Serna</title>
@@ -248,52 +246,35 @@
         </div>
       </div>
 
-      <div class="mapa z-depth-2 hide-on-med-and-down">
-          <div><img ng-src="./assets/img/mapaHoteles.jpg" alt="mapa"></div>
-          <div class="white">
-            <a href="#">Ver hoteles en el mapa</a>
-          </div>
-      </div>
-
       <div class="info-box">
-        <div class="hotelList">
-          <ul>
-            <li>
-              <div class="col s12">
-                <img src="assets/img/HotelEmperador.jpg" alt="hotel">
-              </div>
-              <div class="col s12">
-                <h4 class="grey-text">hotel name</h4>
-              </div>
-              <div class="col s12">
-                <p class="grey-text">hotel stars</p>
-                <p class="grey-text">hotel price</p>
-              </div>
-            </li>
-          </ul>
+        <div class="mapa z-depth-2 hide-on-med-and-down">
+            <div><img ng-src="./assets/img/mapaHoteles.jpg" alt="mapa"></div>
+            <div class="white">
+              <a href="#">Ver hoteles en el mapa</a>
+            </div>
         </div>
-      </div>
 
-      <br>
-      <div class="hide-on-med-and-down">
-        <h6 class="grey-text text-darken-4">Filtrar</h6>
-        <div class="filtrado z-depth-2">
-          <div class="row">
-            <div class="col s12">
-              <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                  <div class="collapsible-header light-blue-text">
-                    <i class="material-icons">search</i>
-                    <a><p>Nombre de hotel</p></a>
-                  </div>
-                  <div class="collapsible-body">
-                    <div class="input-field col s12">
-                      <input placeholder="Search" class="validate">
-                      <button class="btn waves-effect waves-light light-blue" type="submit" name="action">Aceptar</button>
+        <br>
+        <div class="hide-on-med-and-down">
+          <h6 class="grey-text text-darken-4">Filtrar</h6>
+          <div class="filtrado z-depth-2">
+            <div class="row">
+              <div class="col s12">
+                <ul class="collapsible" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header light-blue-text">
+                      <i class="material-icons">search</i>
+                      <a><p>Nombre de hotel</p></a>
                     </div>
-                  </div>
-                </li>
-              </ul>
+                    <div class="collapsible-body">
+                      <div class="input-field col s12">
+                        <input placeholder="Search" class="validate">
+                        <button class="btn waves-effect waves-light light-blue" type="submit" name="action">Aceptar</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -383,6 +364,43 @@
         </div>
       </div>
 
+      <div class="hotelList">
+        <ul>
+          <li class="z-depth-2">
+            <div class="row">
+              <div class="col s4">
+                <img src="assets/img/HotelEmperador.jpg" alt="hotel">
+              </div>
+              <div class="col s4">
+                <h6 class="black-text">Hotel name</h6>
+                <label for="star3">
+                  <i class="material-icons yellow-text">star</i>
+                  <i class="material-icons yellow-text">star</i>
+                  <i class="material-icons yellow-text">star</i>
+                </label>
+                <h6 class="orange-text text-darken-2">
+                  <i class="tiny material-icons orange-text text-darken-2">local_hotel</i>
+                  Solo la habitación
+                </h6>
+                <i class="material-icons black-text">local_bar</i>
+                <i class="material-icons black-text">beach_access</i>
+                <i class="material-icons black-text">event_available</i>
+                <i class="material-icons black-text">local_cafe</i>
+                <i class="material-icons black-text">fitness_center</i>
+              </div>
+              <div class="col s4 precio center-align">
+                <p class="black-text">Precio por noche por habitación</p>
+                <h4 class="orange-text text-darken-2">ARS 1.596</h4>
+                <p class="black-text">Impuestos y tasas no incluidos</p>
+                <a class="btn blue" href="#">Ver hotel</a>
+                <h6 class="black-text">Pagá en cuotas</h6>
+                <h6 class="black-text">Pagá en destino</h6>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
       <div class="row" ng-controller= 'hotelController as hControl.hoteles'>
         <ul>
           <li ng-repeat= 'hotel in hControl'>
@@ -394,7 +412,7 @@
             </div>
             <div class="col s12">
               <p class="grey-text">{{hotel.stars}}</p>
-              <p class="grey-text">{{hotel.price |currency:''}}</p>
+              <p class="grey-text">{{hotel.price | currency:''}}</p>
             </div>
           </li>
         </ul>
