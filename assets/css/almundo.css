@@ -47,110 +47,69 @@ nav .nav-content i.material-icons{
   height: 40px;
   line-height: 30px;
 }
-#dropdown4{
-  width: 200px !important;
-}
-footer.page-footer{
-  background-color: #12407f;
-}
+#dropdown4{width: 200px !important;}
+footer.page-footer{background-color: #12407f;}
 .mapa{
   width: 241px;
   height: 110px;
   background-color: white;
   text-align: center;
 }
-
 .filtrado{
   width: 241px;
   background-color: white;
 }
-.filtrado .row{
-  margin-bottom: 5px;
-}
-
+.filtrado .row{margin-bottom: 5px;}
 .details{
   border: 1px solid black;
   padding: 10px 10px;
 }
-
 .collapsible{
   box-shadow: none;
   border: none;
   margin: 0px 0px;
 }
-
 .collapsible-header{
   padding: 0 0;
   border-bottom: none;
 }
-
 .collapsible-header.small{
   background-color: transparent;
   border-bottom: 2px solid #6e6e6e;
 }
-
-input{
-  color: black;
-}
-
-.input-field{
-  margin: 15px;
-}
-
-.collapsible-body p{
-  padding: 1rem;
-}
-
+input{color: black;}
+.input-field{margin: 15px;}
+.collapsible-body p{padding: 1rem;}
 .hotelList{
   margin-left: 25%;
   margin-top: 0px;
   height: auto;
 }
-
-.hotelList img{
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
 .hotelList li{
   background-color: white;
   padding: 10px 10px;
-  height: 220px;
+  height: 200px;
   margin-bottom: 20px;
 }
-
-.info-box{
-  float: left;
-}
-
-h6{
-  font-weight: bold;
-}
-
+.info-box{float: left;}
+h6{font-weight: bold;}
 h4{
   font-weight: bold;
   margin: 0px;
 }
-
-.precio{
-  border-left: 1px dashed #656565;
-}
-
+.precio{border-left: 1px dashed #656565;}
 .precio p{
   line-height: normal;
   margin: 5px;
 }
-
 /*responsive*/
 @media only screen and (max-width: 1280px) {
-  .nav-content ul li a{
-    padding: 0px 4px;
-  }
+  .nav-content ul li a{padding: 0px 4px;}
+  .hotelList {margin-left: 29%;}
+  .hotelList li{height: 235px;}
 }
 @media only screen and (max-width: 1024px) {
-  .nav-content ul li a{
-    padding: 0px 3px;
-  }
+  .nav-content ul li a{padding: 0px 3px;}
 }
 @media only screen and (max-width: 992px) {
   nav .brand-logo{
@@ -158,6 +117,12 @@ h4{
   }
   #dropdown1{
     width: 200px !important;
+  }
+  .hotelList{
+    margin-left: 0px;
+  }
+  .hotelList li{
+    height: 240px;
   }
 }
 @media only screen and (max-width: 600px){
@@ -171,5 +136,26 @@ h4{
   }
   i.left{
     margin-right: 0px !important;
+  }
+  .hotelList li{
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 480px){
+  .hotelList li{
+    height: 415px;
+  }
+}
+@media only screen and (max-width: 414px){
+  .hotelList li{
+    height: 500px;
+  }
+  .hotel_datos{
+    width: 100% !important;
+  }
+  .precio{
+    border-left: none;
+    border-top: 1px dashed #656565;
+    width: 100% !important;
   }
 }
