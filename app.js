@@ -1,6 +1,6 @@
 var aplication = angular.module('hotelApp', []);
-aplication.controller('hotelController',function(){
-  var hoteles = [
+aplication.controller('hotelController',function($scope){
+  $scope.hoteles = [
     {
       name:'Hotel Emperador',
       stars:'3',
@@ -15,7 +15,6 @@ aplication.controller('hotelController',function(){
       name:'Hotel Nuevo Boston',
       stars:'2',
       price:'861',
-      img:'assets/img/HotelEmperador.jpg',
+      img:'assets/img/HotelEmperador.jpg'
     }];
-    this.hoteles = hoteles;
 });

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script> -->
+    <title>test</title>
+  </head>
+  <body>
+    <input type="text" ng-model="buscarFruta">
+    <main ng-controller="listas">
+      <ul>
+        <li ng-repeat="fruta in frutas | filter:buscarFruta">{{fruta}}</li>
+      </ul>
+    </main>
+
+     <script type="text/javascript">
+    var myApp = angular.mudule('app', []);
+    myApp.controller('listas',function($scope){
+      $scope.frutas = ['Kiwi','Banana','Arándano'];
+    });
+    </script>
+  </body>
+</html>

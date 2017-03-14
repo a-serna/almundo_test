@@ -27,9 +27,7 @@ nav{
   color: white;
 }
 .nav-wrapper{margin: 0px 5%;}
-.brand-logo{
-  margin: 8px 0px;
-}
+.brand-logo{margin: 8px 0px;}
 .nav-content{
   background: #013870;
   background: -moz-linear-gradient(left, #013870 0%, #31608e 33%, #466994 49%, #466994 49%, #31608e 64%, #013870 100%);
