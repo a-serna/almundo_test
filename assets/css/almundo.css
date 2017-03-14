@@ -1,0 +1,161 @@
+/*css file*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+body{
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: white;
+  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+main {
+  flex: 1 0 auto;
+  padding: 40px 5%;
+}
+nav{
+  background-color: #12407f;
+  color: white;
+}
+.nav-wrapper{margin: 0px 5%;}
+.brand-logo{margin: 8px 0px;}
+.nav-content{
+  background: #013870;
+  background: -moz-linear-gradient(left, #013870 0%, #31608e 33%, #466994 49%, #466994 49%, #31608e 64%, #013870 100%);
+  background: -webkit-linear-gradient(left, #013870 0%,#31608e 33%,#466994 49%,#466994 49%,#31608e 64%,#013870 100%);
+  background: linear-gradient(to right, #013870 0%,#31608e 33%,#466994 49%,#466994 49%,#31608e 64%,#013870 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013870', endColorstr='#013870',GradientType=1 );
+  border-top: 2px solid #5980a4;
+  border-bottom: 2px solid #5980a4;
+  height: 40px;
+  line-height: 30px;
+}
+.nav-content ul li a{
+  height: 40px;
+  padding: 0px 10px;
+}
+nav .nav-content i.material-icons{
+  height: 40px;
+  line-height: 30px;
+}
+#dropdown4{width: 200px !important;}
+footer.page-footer{background-color: #12407f;}
+.mapa{
+  width: 241px;
+  height: 110px;
+  background-color: white;
+  text-align: center;
+}
+.filtrado{
+  width: 241px;
+  background-color: white;
+}
+.filtrado .row{margin-bottom: 5px;}
+.details{
+  border: 1px solid black;
+  padding: 10px 10px;
+}
+.collapsible{
+  box-shadow: none;
+  border: none;
+  margin: 0px 0px;
+}
+.collapsible-header{
+  padding: 0 0;
+  border-bottom: none;
+}
+.collapsible-header.small{
+  background-color: transparent;
+  border-bottom: 2px solid #6e6e6e;
+}
+input{color: black;}
+.input-field{margin: 15px;}
+.collapsible-body p{padding: 1rem;}
+.hotelList{
+  margin-left: 25%;
+  margin-top: 0px;
+  height: auto;
+}
+.hotelList li{
+  background-color: white;
+  padding: 10px 10px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+.info-box{float: left;}
+h6{font-weight: bold;}
+h4{
+  font-weight: bold;
+  margin: 0px;
+}
+.precio{border-left: 1px dashed #656565;}
+.precio p{
+  line-height: normal;
+  margin: 5px;
+}
+/*responsive*/
+@media only screen and (max-width: 1280px) {
+  .nav-content ul li a{padding: 0px 4px;}
+  .hotelList {margin-left: 29%;}
+  .hotelList li{height: 235px;}
+}
+@media only screen and (max-width: 1024px) {
+  .nav-content ul li a{padding: 0px 3px;}
+}
+@media only screen and (max-width: 992px) {
+  nav .brand-logo{
+    left: 25%;
+  }
+  #dropdown1{
+    width: 200px !important;
+  }
+  .hotelList{
+    margin-left: 0px;
+  }
+  .hotelList li{
+    height: 240px;
+  }
+}
+@media only screen and (max-width: 600px){
+  nav .brand-logo{
+    left: 25%;
+    width: 50%;
+    margin: 7px 3px;
+  }
+  nav ul a{
+    padding: 0 0;
+  }
+  i.left{
+    margin-right: 0px !important;
+  }
+  .hotelList li{
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 480px){
+  .hotelList li{
+    height: 415px;
+  }
+}
+@media only screen and (max-width: 414px){
+  .hotelList li{
+    height: 500px;
+  }
+  .hotel_datos{
+    width: 100% !important;
+  }
+  .precio{
+    border-left: none;
+    border-top: 1px dashed #656565;
+    width: 100% !important;
+  }
+}

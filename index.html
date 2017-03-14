@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="hotelApp">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Prueba Frontend almundo">
@@ -9,20 +9,426 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" href="css/almundo.css">
-    <link rel="icon" href="" type="image/png">
+    <link rel="stylesheet" href="assets/css/almundo.css">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <link href="assets/css/nouislider.min.css" rel="stylesheet">
+    <script src="assets/js/almundo.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <!-- <script src="components/hoteles.js" charset="utf-8"></script> -->
     <title>Al mundo | Alejandro Serna</title>
   </head>
-  <body ng-app="">
-    <header><nav>
-      <p>Name : <input type="text" ng-model="name"></p>
-      <h1 class="black-text">Hello {{name}}</h1>
-    </nav></header>
-    <main></main>
-    <footer></footer>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"><img class="responsive-img" src="assets/img/logo-almundo.svg" alt="almundo.com"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#"><i class="material-icons left">person</i>Ingresar</a></li>
+            <li><a href="#"><img src="assets/img/clubtext.png" alt="clubalmundo"></a></li>
+            <li><a href="#">Sucursales</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown4">Llamanos<i class="material-icons right">keyboard_arrow_down</i></a></li>
+            <div id='dropdown4' class='dropdown-content'>
+              <ul>
+                <li>
+                  <a href="#!">
+                    <p class="grey-text text-darken-4">Ventas y atención al cliente</p>
+                    <p class="grey-text">018000943040 (+57) 1 5082969</p>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="#!">
+                    <p class="grey-text">Lunes a viernes 7 a 21 hs</p>
+                    <p class="grey-text">Sábados 8 a 16 hs Domingos y festivos 10 a 16 hs</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+          <!--nav med and small-->
+          <div class="right hide-on-large-only">
+            <ul>
+              <li><a href="#"><i class="material-icons left">person</i></a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">phone</i></a></li>
+              <div id='dropdown1' class='dropdown-content'>
+                <ul>
+                  <li>
+                    <a href="#!">
+                      <p class="grey-text text-darken-4">Ventas y atención al cliente</p>
+                      <p class="grey-text">018000943040 (+57) 1 5082969</p>
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#!">
+                      <p class="grey-text">Lunes a viernes 7 a 21 hs</p>
+                      <p class="grey-text">Sábados 8 a 16 hs Domingos y festivos 10 a 16 hs</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <li><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a></li>
+            </ul>
+            <ul class="side-nav center-align" id="mobile-demo">
+              <li><a href="#">Hoteles</a></li>
+              <li><a href="#">Vuelo</a></li>
+              <li><a href="#">Vuelo + Hotel</a></li>
+              <li><a href="#">Paquetes</a></li>
+              <li><a href="#">Disney</a></li>
+              <li><a href="#">Escapadas</a></li>
+              <li><a href="#">Seguros</a></li>
+              <li><a href="#">Autos</a></li>
+              <li><a href="#">Cruceros</a></li>
+              <li><a href="#">OFERTAS</a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Más<i class="material-icons right">keyboard_arrow_down</i></a></li>
+              <div id='dropdown3' class='dropdown-content'>
+                <li><a href="#!"><p class="grey-text">opción 1</p></a></li>
+                <li class="divider"></li>
+                <li><a href="#!"><p class="grey-text">opción 2</p></a></li>
+                <li class="divider"></li>
+                <li><a href="#!"><p class="grey-text">opción 3</p></a></li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-content hide-on-med-and-down">
+          <ul class="container">
+            <li><a href="#">Hoteles</a></li>
+            <li><a href="#">Vuelo</a></li>
+            <li><a href="#">Vuelo + Hotel</a></li>
+            <li><a href="#">Paquetes</a></li>
+            <li><a href="#">Disney</a></li>
+            <li><a href="#">Escapadas</a></li>
+            <li><a href="#">Seguros</a></li>
+            <li><a href="#">Autos</a></li>
+            <li><a href="#">Cruceros</a></li>
+            <li><a href="#">OFERTAS</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Más<i class="material-icons right">keyboard_arrow_down</i></a></li>
+            <div id="dropdown2" class="dropdown-content">
+              <ul>
+                <li class="divider"></li>
+                <li><a href="#!"><p class="grey-text">opción 1</p></a></li>
+                <li class="divider"></li>
+                <li><a href="#!"><p class="grey-text">opción 2</p></a></li>
+                <li class="divider"></li>
+                <li><a href="#!"><p class="grey-text">opción 3</p></a></li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main ng-controller='hotelController'>
+      <div class="hide-on-med-and-down">
+        <div class="col s12">
+          <a href="#!">Home /</a>
+          <a href="#!">Hoteles /</a>
+          <a href="#!">Madrid</a>
+        </div>
+      </div>
+      <div class="row details hide-on-med-and-down">
+        <div class="s12">
+          <h6 class="grey-text text-darken-4">Hoteles disponibles para:</h6>
+          <div>
+            <ul class="tabs tabs-transparent">
+              <li class="tab grey-text text-darken-4"><i class="tiny material-icons">place</i> Madrid</li>
+              <li class="tab grey-text text-darken-4"><i class="tiny material-icons">insert_invitation</i> 16/11/2016</li>
+              <li class="tab grey-text text-darken-4"><i class="tiny material-icons">today</i> 30/11/2016</li>
+              <li class="tab grey-text text-darken-4"><i class="tiny material-icons">person</i> 2 Huéspedes</li>
+              <a href="#">  Modificar búsqueda</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--small-->
+      <div class="hide-on-large-only">
+        <div class="row">
+          <div class="col s12">
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header small light-blue-text">
+                  <i class="material-icons right">arrow_drop_down</i>
+                  <a><p class="center-align">Modificar búsqueda</p></a>
+                </div>
+                <div class="collapsible-body">
+                  <div class="input-field col s12">
+                    <input placeholder="Search" class="validate">
+                    <button class="btn waves-effect waves-light light-blue" type="submit" name="action">Aceptar</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12">
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header small light-blue-text">
+                  <a><p class="center-align">Ver hoteles en el mapa</p></a>
+                </div>
+                <div class="collapsible-body">
+                  <div><img ng-src="./assets/img/mapaHoteles.jpg" alt="mapa"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12">
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header small light-blue-text">
+                  <i class="material-icons right">arrow_drop_down</i>
+                  <a><p class="center-align">Filtrar</p></a>
+                </div>
+                <div class="collapsible-body">
+                  <form action="#">
+                    <div class="input-field col s12">
+                      <input placeholder="Nombre de hotel" class="validate" ng-model="buscarHotel">
+                      <p class="grey-text text-darken-6">Precio por noche</p>
+                      <p class="range-field">
+                        <input type="range" id="test5" min="750" max="2000"/>
+                      </p>
+                      <p class="grey-text text-darken-6">Estrellas</p>
+                      <p>
+                        <input type="checkbox" id="allstar" />
+                        <label for="allstar">Todas las Estrellas</label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="star5" />
+                        <label for="star5">
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="star4" />
+                        <label for="star4">
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="star3" />
+                        <label for="star3">
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="star2" />
+                        <label for="star2">
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="star1" />
+                        <label for="star1">
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <button class="btn waves-effect waves-light light-blue" type="submit" name="action">Aceptar</button>
+                    </div>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="mapa z-depth-2 hide-on-med-and-down">
+            <div><img ng-src="./assets/img/mapaHoteles.jpg" alt="mapa"></div>
+            <div class="white">
+              <a href="#">Ver hoteles en el mapa</a>
+            </div>
+        </div>
+        <br>
+        <div class="hide-on-med-and-down">
+          <h6 class="grey-text text-darken-4">Filtrar</h6>
+          <div class="filtrado z-depth-2">
+            <div class="row">
+              <div class="col s12">
+                <ul class="collapsible" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header light-blue-text">
+                      <i class="material-icons">search</i>
+                      <a><p>Nombre de hotel</p></a>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="input-field col s12">
+                        <input placeholder="Search" class="validate" ng-model="buscarHotel">
+                        <button class="btn waves-effect waves-light light-blue" type="submit" name="action">Aceptar</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filtrado z-depth-2 hide-on-med-and-down">
+          <div class="row">
+            <div class="col s12">
+              <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header light-blue-text">
+                    <i class="material-icons">attach_money</i>
+                    <a><p>Precio por noche</p></a>
+                  </div>
+                  <div class="collapsible-body">
+                    <form action="#">
+                      <p class="range-field">
+                        <input type="range" id="test5" min="750" max="2000" ng-model="buscarPrecio"/>
+                      </p>
+                    </form>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="filtrado z-depth-2 hide-on-med-and-down">
+          <div class="row">
+            <div class="col s12">
+              <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header light-blue-text">
+                    <i class="material-icons">star</i>
+                    <a><p>Estrellas</p></a>
+                  </div>
+                  <div class="collapsible-body">
+                    <form action="#">
+                      <p>
+                        <input type="checkbox" id="alls" />
+                        <label for="alls">Todas las Estrellas</label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="s5" />
+                        <label for="s5">
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="s4" />
+                        <label for="s4">
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="s3"/>
+                        <label for="s3">
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="s2"/>
+                        <label for="s2">
+                          <i class="material-icons yellow-text">star</i>
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                      <p>
+                        <input type="checkbox" id="s1"/>
+                        <label for="s1">
+                          <i class="material-icons yellow-text">star</i>
+                        </label>
+                      </p>
+                    </form>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotelList">
+        <ul>
+          <li class="z-depth-2" ng-repeat= "hotel in hoteles | filter:buscarHotel">
+            <div class="row">
+              <div class="col s12 m4 center-align">
+                <img ng-src={{hotel.img}} alt="hotel" class="responsive-img">
+              </div>
+              <div class="col s6 m4 hotel_datos">
+                <h6 class="black-text">{{hotel.name}}</h6>
+                <label for="star3">
+                  <i class="material-icons yellow-text">{{hotel.star01}}</i>
+                  <i class="material-icons yellow-text">{{hotel.star02}}</i>
+                  <i class="material-icons yellow-text">{{hotel.star03}}</i>
+                  <i class="material-icons yellow-text">{{hotel.star04}}</i>
+                  <i class="material-icons yellow-text">{{hotel.star05}}</i>
+                </label>
+                <h6 class="orange-text text-darken-2">
+                  <i class="tiny material-icons orange-text text-darken-2">local_hotel</i>
+                  Solo la habitación
+                </h6>
+                <i class="material-icons black-text">{{hotel.service01}}</i>
+                <i class="material-icons black-text">{{hotel.service02}}</i>
+                <i class="material-icons black-text">{{hotel.service03}}</i>
+                <i class="material-icons black-text">{{hotel.service04}}</i>
+                <i class="material-icons black-text">{{hotel.service05}}</i>
+                <i class="material-icons black-text">{{hotel.service06}}</i>
+              </div>
+              <div class="col s6 m4 precio center-align">
+                <p class="black-text">{{hotel.aviso01}}</p>
+                <h4 class="orange-text text-darken-2">{{hotel.price | currency:"ARS ":0}}</h4>
+                <p class="black-text">{{hotel.detalle01}} {{hotel.sinPromo}}</p>
+                <p class="black-text">{{hotel.aviso02}}</p>
+                <a class="btn blue" href="#">Ver hotel</a>
+                <h6 class="black-text">{{hotel.pago01}}</h6>
+                <h6 class="black-text">{{hotel.pago02}}</h6>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Prueba técnica</h5>
+            <p class="grey-text text-lighten-4">Desarrollo frontend para Almundo.com</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/a-serna">github: a-serna</a></li>
+              <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.linkedin.com/in/alejobrumker/">Linkedin: Luis Alejandro Serna Velásquez</a></li>
+              <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.behance.net/AlejoSe">Behance: AlejoSe</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Luis Alejandro Serna Velásquez | Diseñador visual
+        <a class="grey-text text-lighten-4 right" href="#">alejo.tanatos@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/nouislider.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   </body>
