@@ -246,7 +246,7 @@
       </div>
       <div class="info-box">
         <div class="mapa z-depth-2 hide-on-med-and-down">
-            <div><img src="./assets/img/mapaHoteles.jpg" alt="mapa"></div>
+            <div><img ng-src="./assets/img/mapaHoteles.jpg" alt="mapa"></div>
             <div class="white">
               <a href="#">Ver hoteles en el mapa</a>
             </div>
@@ -266,7 +266,7 @@
                     <div class="collapsible-body">
                       <div class="input-field col s12">
                         <input placeholder="Search" class="validate" ng-model="buscarHotel">
-                        <button class="btn waves-effect waves-light light-blue" type="submit" name="action" ng-click="hotelController.isSelected(1)">Aceptar</button>
+                        <button class="btn waves-effect waves-light light-blue" type="submit" name="action">Aceptar</button>
                       </div>
                     </div>
                   </li>
@@ -288,7 +288,7 @@
                   <div class="collapsible-body">
                     <form action="#">
                       <p class="range-field">
-                        <input type="range" id="test5" min="750" max="2000"/>
+                        <input type="range" id="test5" min="750" max="2000" ng-model="buscarPrecio"/>
                       </p>
                     </form>
                   </div>
@@ -372,6 +372,7 @@
               <div class="col s4">
                 <h6 class="black-text">{{hotel.name}}</h6>
                 <label for="star3">
+                  <!-- <i class="material-icons yellow-text">{{hotel.star}}</i> -->
                   <i class="material-icons yellow-text">star</i>
                   <i class="material-icons yellow-text">star</i>
                   <i class="material-icons yellow-text">star</i>
@@ -387,12 +388,13 @@
                 <i class="material-icons black-text">fitness_center</i>
               </div>
               <div class="col s4 precio center-align">
-                <p class="black-text">Precio por noche por habitación</p>
-                <h4 class="orange-text text-darken-2">ARS {{hotel.price | currency:''}}</h4>
-                <p class="black-text">Impuestos y tasas no incluidos</p>
+                <p class="black-text">{{hotel.aviso01}}</p>
+                <h4 class="orange-text text-darken-2">{{hotel.price | currency:"ARS ":0}}</h4>
+                <p class="black-text">{{hotel.detalle01}} {{hotel.sinPromo}}</p>
+                <p class="black-text">{{hotel.aviso02}}</p>
                 <a class="btn blue" href="#">Ver hotel</a>
-                <h6 class="black-text">Pagá en cuotas</h6>
-                <h6 class="black-text">Pagá en destino</h6>
+                <h6 class="black-text">{{hotel.pago01}}</h6>
+                <h6 class="black-text">{{hotel.pago02}}</h6>
               </div>
             </div>
           </li>
